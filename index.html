@@ -1,0 +1,1262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Understanding Extra Time and Penalty Shootouts in Football</title>
+<meta name="description" content="Understand how extra time and penalty shootouts work in football, including match duration, extra-time periods, penalty rules and how winners are decided.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="keywords" content="extra time in football, penalty shootouts, football extra time rules, penalty shootout rules, extra time explained">
+
+<style>
+:root {
+    --bg: #f0eff5;
+    --white: #ffffff;
+    --purple: #28213f;
+    --purple2: #40315f;
+    --orange: #f47738;
+    --orange-light: #fff0e6;
+    --ink: #29263a;
+    --muted: #716e80;
+    --border: #e5e1ec;
+    --soft: #f7f5fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+}
+
+a {
+    color: #b84e21;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--purple2);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1180px;
+    padding: 22px 20px 55px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0 23px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #dcd7e5;
+}
+
+.logo {
+    color: var(--purple);
+    font-weight: 900;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.header-label {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(244,119,56,.25), transparent 28%),
+        linear-gradient(125deg, #28213f, #40315f 65%, #633d54);
+    color: white;
+    padding: 62px 52px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(40,33,63,.13);
+}
+
+.hero:after {
+    content: "⚽";
+    position: absolute;
+    right: 35px;
+    bottom: -10px;
+    font-size: 160px;
+    opacity: .12;
+    transform: rotate(-17deg);
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(244,119,56,.15);
+    border: 1px solid rgba(244,119,56,.45);
+    color: #ffb68f;
+    border-radius: 30px;
+    padding: 7px 14px;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 830px;
+    font-size: clamp(32px, 5vw, 51px);
+    line-height: 1.18;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    color: #e4dfed;
+    font-size: 16px;
+}
+
+.hero-meta {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.hero-meta span {
+    background: rgba(255,255,255,.10);
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #f4eff8;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 275px;
+    gap: 25px;
+    align-items: start;
+}
+
+.content {
+    min-width: 0;
+}
+
+.section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 21px;
+    box-shadow: 0 5px 18px rgba(40,33,63,.025);
+}
+
+.section h2 {
+    color: var(--purple);
+    font-size: 25px;
+    line-height: 1.35;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eeeaf3;
+}
+
+.section h2:before {
+    content: "";
+    display: inline-block;
+    height: 22px;
+    width: 5px;
+    background: var(--orange);
+    border-radius: 5px;
+    margin-right: 11px;
+    vertical-align: -3px;
+}
+
+.section h3 {
+    color: #a94d2b;
+    font-size: 19px;
+    margin: 24px 0 10px;
+}
+
+.section p {
+    color: #565366;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.section ul,
+.section ol {
+    color: #565366;
+    padding-left: 24px;
+    margin: 12px 0 18px;
+}
+
+.section li {
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.section strong {
+    color: var(--purple);
+}
+
+.toc {
+    position: sticky;
+    top: 20px;
+    background: var(--purple);
+    color: white;
+    padding: 23px 20px;
+    border-radius: 16px;
+}
+
+.toc h3 {
+    color: #ffad7e;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.toc a {
+    display: block;
+    color: #e5dfed;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 9px 0;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.toc a:hover {
+    color: #ffb68f;
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+.callout {
+    padding: 20px;
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    border-radius: 9px;
+    margin: 20px 0;
+}
+
+.callout p {
+    margin: 0;
+    color: #65402e;
+}
+
+.purple-callout {
+    background: #f0edf7;
+    border-left-color: var(--purple2);
+}
+
+.purple-callout p {
+    color: #49415f;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.info-card {
+    background: var(--soft);
+    border: 1px solid var(--border);
+    padding: 20px 13px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.info-card strong {
+    display: block;
+    color: var(--orange);
+    font-size: 25px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.info-card span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.comparison {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.comparison th {
+    background: var(--purple);
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+.comparison td {
+    border: 1px solid var(--border);
+    padding: 13px;
+    color: #555166;
+    vertical-align: top;
+}
+
+.comparison tr:nth-child(even) td {
+    background: #f8f6fa;
+}
+
+.comparison td:first-child {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.example {
+    padding: 21px;
+    background: #f5f2fa;
+    border: 1px solid #e6e0ef;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.example-label {
+    color: #a94d2b;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.example p:last-child {
+    margin-bottom: 0;
+}
+
+.faq {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq:last-child {
+    border-bottom: none;
+}
+
+.faq h3 {
+    color: var(--purple);
+    font-size: 17px;
+    margin: 0 0 8px;
+}
+
+.faq p {
+    margin: 0;
+}
+
+.related {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 17px;
+}
+
+.related a {
+    background: var(--orange-light);
+    border: 1px solid #f4d5c4;
+    border-radius: 8px;
+    padding: 10px 13px;
+    font-size: 13px;
+}
+
+.footer {
+    background: var(--purple);
+    color: white;
+    padding: 32px 20px;
+    border-radius: 17px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer strong {
+    color: #ffad7e;
+    font-size: 21px;
+}
+
+.footer p {
+    color: #d5cfe0;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.footer-links a {
+    color: #ffb68f;
+    font-size: 13px;
+}
+
+@media(max-width: 850px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .toc {
+        position: static;
+        order: -1;
+    }
+
+    .hero {
+        padding: 45px 28px;
+    }
+
+    .hero:after {
+        right: 5px;
+        font-size: 100px;
+    }
+}
+
+@media(max-width: 560px) {
+    .container {
+        padding: 13px 11px 35px;
+    }
+
+    .hero {
+        padding: 35px 21px;
+    }
+
+    .section {
+        padding: 22px 17px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison {
+        font-size: 12px;
+    }
+
+    .comparison td,
+    .comparison th {
+        padding: 9px 7px;
+    }
+
+    .header-label {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="header">
+    <div class="logo">MATCH<span>EXPLAINED</span></div>
+    <div class="header-label">Football Rules & Guides</div>
+</header>
+
+<section class="hero" id="top">
+    <span class="hero-tag">Football Rules Explained</span>
+    <h1>Understanding Extra Time and Penalty Shootouts in Football</h1>
+    <p>
+        When a football match remains level and a competition needs a winner,
+        the action may continue beyond normal playing time. Learn how extra
+        time works, why penalty shootouts happen and how teams are separated
+        when the score is still tied.
+    </p>
+    <div class="hero-meta">
+        <span>Extra Time Rules</span>
+        <span>Penalty Procedures</span>
+        <span>Football Guide</span>
+    </div>
+</section>
+
+<div class="layout">
+
+<main class="content">
+
+<section class="section">
+<h2 id="intro">Introduction</h2>
+
+<p>
+Football matches can produce exciting finishes, especially when two teams
+are closely matched. Sometimes neither side can secure a winning goal
+during the regular 90 minutes. In a league match, the referee usually
+ends the game after the applicable added time, and both teams accept
+the draw. However, knockout competitions often need one team to advance.
+</p>
+
+<p>
+This is where extra time and penalty shootouts become important. Extra
+time gives teams another period to compete on the pitch. If the score
+remains level after those additional periods, the competition may use
+a penalty shootout to determine the winner.
+</p>
+
+<p>
+Although people sometimes use the terms interchangeably, extra time
+and a penalty shootout are two different procedures. Extra time is
+continued football played by the teams, while a shootout is a separate
+series of kicks taken after the match has ended.
+</p>
+
+<p>
+Understanding these rules makes it easier to follow cup matches,
+international tournaments and other competitions where a draw cannot
+always be the final outcome.
+</p>
+</section>
+
+<section class="section">
+<h2 id="normal-time">What Is Normal Time in Football?</h2>
+
+<p>
+A standard senior football match consists of two halves, each lasting
+45 minutes. There is normally a half-time interval between the two
+periods. The referee also allows additional time at the end of each
+half to account for delays during play.
+</p>
+
+<p>
+These delays can include substitutions, injuries, disciplinary
+procedures, goal celebrations and certain video assistant referee
+checks. The fourth official displays the minimum additional time
+indicated by the referee, and the referee can increase it if needed.
+</p>
+
+<div class="info-grid">
+    <div class="info-card">
+        <strong>45</strong>
+        <span>First-half minutes</span>
+    </div>
+    <div class="info-card">
+        <strong>15</strong>
+        <span>Maximum half-time interval</span>
+    </div>
+    <div class="info-card">
+        <strong>45</strong>
+        <span>Second-half minutes</span>
+    </div>
+</div>
+
+<p>
+The added time shown at the end of a half is not the same as extra time.
+Added time compensates for playing time lost during the original 45-minute
+period. Extra time is a separate stage used in certain competitions
+when a winner must be decided.
+</p>
+
+<div class="callout">
+<p>
+<strong>Important distinction:</strong> A match that reaches 90 minutes
+and then has six minutes of added time has not entered extra time.
+The referee is completing the second half.
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2 id="extra-time">What Is Extra Time in Football?</h2>
+
+<p>
+Extra time is an additional period of play used when a competition
+requires a winner but the match remains level after normal time.
+It gives both teams another opportunity to score through regular
+football before a different method of deciding the result is considered.
+</p>
+
+<p>
+Under the Laws of the Game, extra time consists of two equal periods,
+each not exceeding 15 minutes. In the common format, this means
+15 minutes followed by another 15 minutes, making a maximum of
+30 minutes of extra playing time.
+</p>
+
+<h3>How is extra time played?</h3>
+
+<p>
+The teams continue playing on the pitch, following the normal rules
+of football. The referee controls the match, players can attack and
+defend, and goals scored during extra time count towards the match
+score.
+</p>
+
+<p>
+There is a short interval between the two extra-time periods. The
+competition regulations determine the arrangements, including any
+permitted substitutions and other match procedures.
+</p>
+
+<h3>Does extra time always last 30 minutes?</h3>
+
+<p>
+Not necessarily. The Laws allow two equal periods of extra time,
+each no longer than 15 minutes. The exact format is determined by
+the competition rules. If a competition uses the full periods,
+the additional playing time totals 30 minutes.
+</p>
+
+<p>
+The referee may also allow for time lost during extra time, just
+as happens during the normal halves.
+</p>
+
+<div class="callout purple-callout">
+<p>
+<strong>Remember:</strong> Extra time is not automatically played
+after every draw. It is used when the relevant competition rules
+require a winner and provide for this procedure.
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2 id="why">Why Do Football Competitions Use Extra Time?</h2>
+
+<p>
+Many knockout competitions cannot allow two teams to remain tied
+when a match must produce a winner. One club needs to qualify for
+the next round, reach a final or claim a trophy. Extra time provides
+a further opportunity to decide the result through normal football.
+</p>
+
+<p>
+It can also create tactical challenges for managers. Players may
+already have completed 90 minutes of intense activity, so maintaining
+concentration and physical energy becomes increasingly difficult.
+</p>
+
+<h3>More time to create a winning goal</h3>
+
+<p>
+A team that has struggled to score during normal time may find new
+opportunities as the opposition becomes tired. Extra time can open
+spaces, create counter-attacking situations and reward teams that
+manage their energy effectively.
+</p>
+
+<h3>More tactical decisions</h3>
+
+<p>
+Managers may adjust formations, introduce substitutes or change
+their approach according to the score. A team protecting a narrow
+lead might focus on defensive organisation, while a side chasing
+a goal may commit more players forward.
+</p>
+
+<h3>A fairer opportunity to settle a tie on the pitch</h3>
+
+<p>
+Extra time gives both teams additional playing time before a shootout
+is considered. It does not guarantee that the stronger team will win,
+but it provides another opportunity for football to decide the result.
+</p>
+</section>
+
+<section class="section">
+<h2 id="penalties">What Is a Penalty Shootout?</h2>
+
+<p>
+A penalty shootout is a procedure used to determine a winner when
+a competition requires one and the match or tie remains level
+after the applicable playing periods. It takes place after the
+match has ended.
+</p>
+
+<p>
+Instead of continuing open play, the teams take turns attempting
+kicks from the penalty mark. Each attempt is taken against the
+opposing goalkeeper, with the aim of scoring a goal.
+</p>
+
+<p>
+The standard procedure begins with five kicks for each team,
+taken alternately. The team with more successful kicks after
+the initial series wins. However, the shootout can finish before
+all five attempts have been taken if one team already has an
+unassailable advantage.
+</p>
+
+<h3>How does the first five-kick series work?</h3>
+
+<ol>
+<li>The referee conducts the required coin tosses to decide the goal and which team kicks first.</li>
+<li>Teams alternate their attempts.</li>
+<li>Different eligible players take the kicks.</li>
+<li>The referee records whether each attempt results in a goal.</li>
+<li>The team with more goals after the initial series wins, provided the result is already decided.</li>
+</ol>
+
+<div class="callout">
+<p>
+<strong>Example:</strong> If Team A scores four times and Team B
+scores twice after both teams have taken three kicks, Team B cannot
+catch up with its remaining attempts. The shootout ends immediately.
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2 id="sudden-death">What Is Sudden Death in a Penalty Shootout?</h2>
+
+<p>
+Sometimes both teams score the same number of goals after their
+first five attempts. When that happens, the shootout continues
+in additional rounds. This stage is commonly called sudden death.
+</p>
+
+<p>
+Each team takes one kick in the same round. If one team scores
+and the other misses, the team that scored wins. If both score
+or both miss, the shootout continues to another round.
+</p>
+
+<p>
+The process continues until one side has scored more goals than
+the other from the same number of kicks. The teams may change
+their order of kickers in subsequent rounds, but every eligible
+player must take a kick before a player can take a second one.
+</p>
+
+<div class="example">
+<div class="example-label">Illustrative sudden-death example</div>
+<p><strong>Initial five kicks:</strong> Team A 4–4 Team B</p>
+<p><strong>Next round:</strong> Team A scores, Team B misses.</p>
+<p><strong>Final outcome:</strong> Team A wins the shootout.</p>
+<p>
+The competition does not need to continue to another round
+because Team A has scored more goals from the same number
+of attempts.
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2 id="difference">Extra Time vs Penalty Shootout: Main Differences</h2>
+
+<p>
+Both procedures help decide matches that require a winner, but
+they work in different ways. Extra time involves normal football
+play, whereas a penalty shootout uses individual kicks from the
+penalty mark.
+</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Extra Time</th>
+<th>Penalty Shootout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>When it happens</td>
+<td>After normal time, when required</td>
+<td>After the match has ended</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Two periods of play</td>
+<td>Alternating penalty kicks</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Up to 30 minutes of playing time</td>
+<td>Depends on the number of kicks needed</td>
+</tr>
+<tr>
+<td>Scoring</td>
+<td>Goals during open play count</td>
+<td>Successful penalty kicks count</td>
+</tr>
+<tr>
+<td>Players involved</td>
+<td>Teams play normal football</td>
+<td>Eligible kickers and goalkeepers</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>Provide more playing time</td>
+<td>Determine a winner if still level</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+A competition may use extra time followed by penalties. However,
+the organiser's regulations determine whether extra time is used
+and which procedure applies to a tied match.
+</p>
+</section>
+
+<section class="section">
+<h2 id="rules">Important Rules During Penalty Shootouts</h2>
+
+<p>
+Penalty shootouts follow specific procedures under the Laws of
+the Game. The referee is responsible for managing the process
+and ensuring that both teams follow the requirements.
+</p>
+
+<h3>Who can take a penalty?</h3>
+
+<p>
+Only eligible players can take part. Generally, these are players
+who were on the field or temporarily off it for a permitted
+reason when the match ended. A player who has been sent off
+during the match cannot participate in the shootout.
+</p>
+
+<h3>Can the same player take two kicks?</h3>
+
+<p>
+Not before all eligible players on that team have taken their
+first kick. The rules require different players to take the
+initial attempts. Once everyone eligible has taken a kick,
+players may take further attempts in later rounds.
+</p>
+
+<h3>What happens if the goalkeeper is injured?</h3>
+
+<p>
+The Laws provide procedures for replacing a goalkeeper who
+cannot continue. The available replacement depends on the
+circumstances and the eligibility rules. The teams must still
+follow the required player-number arrangements.
+</p>
+
+<h3>Does a yellow card from the match carry into the shootout?</h3>
+
+<p>
+Warnings and cautions issued during the match are not carried
+forward into the penalty shootout. However, disciplinary action
+can still be taken for misconduct during the shootout itself.
+</p>
+
+<h3>What happens if the goalkeeper moves early?</h3>
+
+<p>
+The referee applies the relevant penalty-shootout rules if
+the goalkeeper commits an offence. Depending on the situation,
+the kick may need to be retaken or recorded according to
+the applicable law.
+</p>
+</section>
+
+<section class="section">
+<h2 id="strategy">How Do Managers Prepare for Extra Time?</h2>
+
+<p>
+Extra time places physical and mental demands on players.
+Managers must decide whether to protect their current approach
+or make changes to improve the team's chances of scoring.
+The right decision can influence the final outcome.
+</p>
+
+<h3>Managing player energy</h3>
+
+<p>
+Players may already be tired after 90 minutes. Coaches consider
+fitness levels, injuries and the remaining substitution options
+when deciding which players can continue effectively.
+</p>
+
+<h3>Using substitutions carefully</h3>
+
+<p>
+Fresh players can improve speed, pressing and attacking movement.
+A manager might introduce a forward to create more scoring
+opportunities or a defensive midfielder to protect the team's shape.
+The competition regulations determine the available substitution
+allowances.
+</p>
+
+<h3>Changing the formation</h3>
+
+<p>
+A team chasing a goal may use more attacking players, while a
+side trying to maintain its advantage might strengthen the
+defensive midfield. These changes can affect possession,
+space and the balance between attack and defence.
+</p>
+
+<p>
+For more insight into the decisions coaches make during close
+matches, explore this guide to
+<a href="http://football-match-tactics.getenjoyment.net/" target="_blank" rel="noopener noreferrer">football match tactics and team strategies</a>.
+</p>
+</section>
+
+<section class="section">
+<h2 id="pressure">The Mental Pressure of Penalty Shootouts</h2>
+
+<p>
+Penalty shootouts are challenging because each attempt receives
+significant attention. A kicker must concentrate on the ball,
+the goalkeeper and the chosen target while managing the pressure
+of the situation.
+</p>
+
+<p>
+Goalkeepers also face difficult decisions. They may study the
+opponent's previous penalties, observe body movements or choose
+a direction based on their own preparation. However, a successful
+save is never guaranteed.
+</p>
+
+<h3>Preparation and confidence</h3>
+
+<p>
+Teams often practise penalty routines during training. Players
+may work on their approach, placement and consistency. Coaches
+can also discuss which players are comfortable taking penalties
+and plan an order before the shootout begins.
+</p>
+
+<h3>Why composure matters</h3>
+
+<p>
+A player who remains calm can focus on executing the kick rather
+than becoming distracted by the crowd or the score. Goalkeepers
+must also stay focused because the next attempt can arrive
+quickly.
+</p>
+
+<p>
+There is no single guaranteed method for winning a shootout.
+Preparation can help, but the result still depends on execution
+and the decisions made during each attempt.
+</p>
+</section>
+
+<section class="section">
+<h2 id="draws">What Happens When a Match Is Still Drawn?</h2>
+
+<p>
+Not every football draw leads to extra time or penalties.
+In a league competition, a match can finish level and both
+teams normally receive one point under the standard points
+system. No winner needs to be selected.
+</p>
+
+<p>
+A knockout competition is different. If one team must advance,
+the tournament rules explain how the tie is decided. Depending
+on the format, the next step may be extra time, a penalty
+shootout or another permitted procedure.
+</p>
+
+<p>
+In two-legged competitions, organisers consider the aggregate
+score across both matches. If the tie remains level, the
+competition's regulations determine the method for deciding
+which team progresses.
+</p>
+
+<p>
+For a more detailed explanation of tied results, read
+<a href="https://ali7890-cell.github.io/football-match-draw-guide/" target="_blank" rel="noopener noreferrer">what happens when a football match ends in a draw</a>.
+</p>
+</section>
+
+<section class="section">
+<h2 id="watching">Following Football Matches and Competition Rules</h2>
+
+<p>
+Knowing the difference between normal time, added time, extra
+time and a penalty shootout helps supporters understand what
+they are watching. It is also useful to check the format of
+a tournament before a match begins because not every competition
+uses the same method to determine a winner.
+</p>
+
+<p>
+Fans following football schedules and match coverage can explore
+<a href="https://futbol-libre.live/" target="_blank" rel="noopener noreferrer">futbol-libre.live</a>
+as part of their football browsing routine. Always check that
+the viewing service is authorised and available in your location.
+</p>
+
+<p>
+Another important rule that can influence attacking situations
+is offside. Understanding the
+<a href="https://soccer-offside-rules.great-site.net/?i=1" target="_blank" rel="noopener noreferrer">football offside rule and its application</a>
+can help viewers follow goals, disallowed attacks and referee
+decisions during both normal and extra time.
+</p>
+
+<p>
+For the most reliable information about a specific tournament,
+check its official regulations. The rules may explain whether
+extra time is used, whether penalties follow directly after
+normal time and how substitutions are handled.
+</p>
+</section>
+
+<section class="section">
+<h2 id="mistakes">Common Misunderstandings About Extra Time and Penalties</h2>
+
+<h3>Added time and extra time mean the same thing</h3>
+<p>
+They do not. Added time compensates for stoppages during a half.
+Extra time is a separate stage played when competition rules
+require a winner.
+</p>
+
+<h3>Every drawn match goes to penalties</h3>
+<p>
+This is incorrect. League matches commonly finish as draws.
+Extra time and penalties are used only when the competition
+format requires a winner and provides for those procedures.
+</p>
+
+<h3>A penalty shootout is part of the match score</h3>
+<p>
+The shootout takes place after the match has ended. Its result
+determines which team wins or advances, but the kicks are
+recorded separately from the match score.
+</p>
+
+<h3>Every shootout always has exactly ten kicks</h3>
+<p>
+No. Five kicks per team are the standard initial series, but
+the shootout may finish earlier if the result becomes
+unassailable. It can also continue beyond ten kicks if
+the teams remain level.
+</p>
+
+<h3>The first team to miss automatically loses</h3>
+<p>
+No. A missed kick does not automatically end the shootout.
+The overall score and remaining attempts determine whether
+the other team has already secured an unassailable lead.
+</p>
+</section>
+
+<section class="section">
+<h2 id="faq">Frequently Asked Questions</h2>
+
+<div class="faq">
+<h3>1. How long is extra time in football?</h3>
+<p>
+The common format uses two 15-minute periods, making up to
+30 minutes of extra playing time. The Laws allow each period
+to be no longer than 15 minutes.
+</p>
+</div>
+
+<div class="faq">
+<h3>2. Does every football match have extra time?</h3>
+<p>
+No. Most regular league matches finish after normal time
+and applicable added time. Extra time is used when the
+competition rules require a winner and provide for it.
+</p>
+</div>
+
+<div class="faq">
+<h3>3. How many penalties does each team take?</h3>
+<p>
+Teams normally begin with five kicks each, taken alternately.
+If the score remains level, the shootout continues into
+additional rounds.
+</p>
+</div>
+
+<div class="faq">
+<h3>4. What happens if both teams are level after five penalties?</h3>
+<p>
+The shootout continues in sudden-death rounds. Each team
+takes another kick until one scores more than the other
+from the same number of attempts.
+</p>
+</div>
+
+<div class="faq">
+<h3>5. Is extra time the same as stoppage time?</h3>
+<p>
+No. Stoppage time, also called added time, compensates for
+delays during a half. Extra time is an additional playing
+stage used in certain competitions.
+</p>
+</div>
+
+<div class="faq">
+<h3>6. Can a goalkeeper take a penalty in a shootout?</h3>
+<p>
+Yes. A goalkeeper can take a kick if they are eligible
+under the shootout rules.
+</p>
+</div>
+
+<div class="faq">
+<h3>7. Can a player be substituted before a penalty shootout?</h3>
+<p>
+Ordinary substitutions cannot be made after the match has
+ended just to select a different penalty taker. The Laws
+provide a specific exception for a goalkeeper who cannot
+continue, subject to the applicable conditions.
+</p>
+</div>
+
+<div class="faq">
+<h3>8. Does a goal in extra time count?</h3>
+<p>
+Yes. A goal scored during extra time counts towards the
+match result. It can give one team the lead and decide
+the tie before a shootout is necessary.
+</p>
+</div>
+
+<div class="faq">
+<h3>9. Can a shootout continue indefinitely?</h3>
+<p>
+It can continue through additional rounds if the teams
+remain level. It ends once one team has scored more goals
+than the other from the same number of attempts.
+</p>
+</div>
+
+<div class="faq">
+<h3>10. Who decides whether a match goes to extra time?</h3>
+<p>
+The competition organiser establishes the regulations.
+The referee applies the Laws of the Game and follows
+the procedures specified for that competition.
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2 id="conclusion">Final Thoughts</h2>
+
+<p>
+Extra time and penalty shootouts are two important ways
+football competitions can decide a winner when a match
+remains level. Extra time gives teams additional minutes
+to score through normal play, while a penalty shootout
+uses alternating kicks to determine which side advances.
+</p>
+
+<p>
+The standard extra-time format consists of two equal
+periods of up to 15 minutes each. If the score remains
+level and the tournament requires a winner, penalties
+may follow. The initial shootout normally gives each
+team five attempts, with sudden death used when the
+scores remain tied.
+</p>
+
+<p>
+The most important thing to remember is that these
+procedures are not automatic after every draw. League
+matches commonly finish level, while knockout competitions
+use the procedures stated in their regulations.
+Understanding these differences makes it easier to follow
+football matches and appreciate the pressure involved
+in deciding a close contest.
+</p>
+</section>
+
+<section class="section">
+<h2>Related Football Guides</h2>
+<p>
+Continue exploring football rules, match results and
+competition formats with these related resources.
+</p>
+<div class="related">
+<a href="https://ali7890-cell.github.io/football-match-draw-guide/" target="_blank" rel="noopener noreferrer">Football Draw Guide</a>
+<a href="https://league-vs-cup-competition.vercel.app/" target="_blank" rel="noopener noreferrer">League vs Cup Competition</a>
+<a href="https://soccer-offside-rules.great-site.net/?i=1" target="_blank" rel="noopener noreferrer">Offside Rules</a>
+</div>
+</section>
+
+<section class="section">
+<h2>Official Football Rules Reference</h2>
+<p>
+For the official rules covering match duration, extra time
+and penalty shootouts, consult
+<a href="https://www.theifab.com/laws/latest/determining-the-outcome-of-a-match/" target="_blank" rel="noopener noreferrer">IFAB Law 10: Determining the Outcome of a Match</a>.
+You can also review
+<a href="https://www.theifab.com/laws/latest/the-duration-of-the-match/" target="_blank" rel="noopener noreferrer">IFAB Law 7: The Duration of the Match</a>
+for normal playing time, added time and match duration.
+</p>
+</section>
+
+</main>
+
+<aside class="toc">
+<h3>On This Page</h3>
+<a href="#intro">Introduction</a>
+<a href="#normal-time">Normal Time</a>
+<a href="#extra-time">What Is Extra Time?</a>
+<a href="#why">Why Extra Time Is Used</a>
+<a href="#penalties">Penalty Shootouts</a>
+<a href="#sudden-death">Sudden Death</a>
+<a href="#difference">Main Differences</a>
+<a href="#rules">Shootout Rules</a>
+<a href="#strategy">Manager Strategies</a>
+<a href="#pressure">Mental Pressure</a>
+<a href="#draws">Drawn Matches</a>
+<a href="#watching">Following Matches</a>
+<a href="#mistakes">Common Misunderstandings</a>
+<a href="#faq">FAQs</a>
+<a href="#conclusion">Final Thoughts</a>
+</aside>
+
+</div>
+
+<footer class="footer">
+    <strong>MATCH EXPLAINED</strong>
+    <p>
+        Clear football guides covering match rules, competition formats
+        and the details behind the game.
+    </p>
+    <div class="footer-links">
+        <a href="#top">Back to Top</a>
+        <a href="#faq">FAQs</a>
+        <a href="#conclusion">Conclusion</a>
+    </div>
+    <p>© 2026 Match Explained. All rights reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>
